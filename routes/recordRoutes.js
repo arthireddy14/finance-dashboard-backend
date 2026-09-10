@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const express = require("express");
 
 const {
@@ -57,5 +58,20 @@ router.delete(
     authorizeRoles("admin"),
     deleteRecord
 );
+=======
+const express = require('express');
+const router = express.Router();
+
+const recordController = require('../controllers/recordController');
+const authMiddleware = require('../middleware/authMiddleware');
+const authorizeRoles = require('../middleware/authorizeRoles');
+
+// create record
+router.post('/', authMiddleware, authorizeRoles('admin'),recordController.createRecord);
+router.get('/', authMiddleware, recordController.getRecords);
+router.put('/:id', authMiddleware, authorizeRoles('admin'),recordController.updateRecord);
+router.delete('/:id', authMiddleware, authorizeRoles('admin'),recordController.deleteRecord);
+router.get('/summary', authMiddleware, recordController.getSummary);
+>>>>>>> 38b555646dd126d50ae08556bdb6422047456ae9
 
 module.exports = router;

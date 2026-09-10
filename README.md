@@ -32,8 +32,11 @@ This project is a backend system for a finance dashboard where users can manage 
 - Total expense
 - Net balance
 - Total records count
+<<<<<<< HEAD
 - Monthly income and expense analysis
 - Expense breakdown by category
+=======
+>>>>>>> 38b555646dd126d50ae08556bdb6422047456ae9
 
 ---
 
@@ -74,10 +77,13 @@ This project is a backend system for a finance dashboard where users can manage 
 - DELETE /api/records/:id (Admin)
 - GET /api/records/summary (All users)
 
+<<<<<<< HEAD
 ### Analytics
 - GET /api/analytics/monthly (Analyst/Admin)
 - GET /api/analytics/category (Analyst/Admin)
 
+=======
+>>>>>>> 38b555646dd126d50ae08556bdb6422047456ae9
 ---
 
 ## 🔐 Authorization

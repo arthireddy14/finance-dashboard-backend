@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "name": "finance-dashboard-backend",
   "version": "1.0.0",
   "description": "REST API backend for a Finance Dashboard application",
@@ -17,4 +18,25 @@
     "mongodb": "^7.6.0",
     "mongoose": "^9.9.5"
   }
+=======
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.0",
+    "express": "^5.2.1",
+    "jsonwebtoken": "^9.0.3",
+    "mongoose": "^9.4.1",
+    "pg": "^8.20.0"
+  },
+  "name": "finance_project",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+>>>>>>> 38b555646dd126d50ae08556bdb6422047456ae9
 }
