@@ -6,12 +6,6 @@ A role-based backend system for a finance dashboard that enables organizations t
 
 The application uses **JWT authentication** and **Role-Based Access Control (RBAC)** to control access to financial operations and analytics.
 
-### 🌐 Live Deployment
-
-**Render:**
-
-**Health Check:**
-
 ---
 
 ## 🚀 Features
