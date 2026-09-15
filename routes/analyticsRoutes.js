@@ -1,20 +1,27 @@
 const express = require("express");
 
 const {
-    getMonthlyAnalytics,
-    getCategoryAnalytics
+    getCategoryAnalytics,
+    getMonthlyAnalytics
 } = require("../controllers/analyticsController");
 
 const authMiddleware = require("../middleware/authMiddleware");
-const authorizeRoles = require("../middleware/roleMiddleware");
+const authorizeRoles = require("../middleware/authorizeRoles");
 
 const router = express.Router();
 
-// Analytics are available to authenticated Analysts and Admins.
 router.use(authMiddleware);
-router.use(authorizeRoles("analyst", "admin"));
 
-router.get("/monthly", getMonthlyAnalytics);
-router.get("/category", getCategoryAnalytics);
+router.get(
+    "/category",
+    authorizeRoles("analyst", "admin"),
+    getCategoryAnalytics
+);
+
+router.get(
+    "/monthly",
+    authorizeRoles("analyst", "admin"),
+    getMonthlyAnalytics
+);
 
 module.exports = router;
